@@ -169,6 +169,7 @@ if(-Not $SkipToolPackageRestore.IsPresent) {
     }
 
     Write-Verbose -Message "Restoring tools from NuGet..."
+    Write-Host "Starting my"
     $CUSTOM_SOURCE = "https://api.nuget.org/v3/index.json"
     $NuGetOutput = Invoke-Expression "&`"$NUGET_EXE`" install -ExcludeVersion -OutputDirectory `"$TOOLS_DIR`" -Source `"$CUSTOM_SOURCE`""
 
