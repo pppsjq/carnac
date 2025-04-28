@@ -169,7 +169,8 @@ if(-Not $SkipToolPackageRestore.IsPresent) {
     }
 
     Write-Verbose -Message "Restoring tools from NuGet..."
-    $NuGetOutput = Invoke-Expression "&`"$NUGET_EXE`" -Source "https://api.nuget.org/v3/index.json" install -ExcludeVersion -OutputDirectory `"$TOOLS_DIR`""
+    $CUSTOM_SOURCE = "https://api.nuget.org/v3/index.json"
+    $NuGetOutput = Invoke-Expression "&`"$NUGET_EXE`" install -ExcludeVersion -OutputDirectory `"$TOOLS_DIR`" -Source `"$CUSTOM_SOURCE`""
 
     if ($LASTEXITCODE -ne 0) {
         Throw "An error occured while restoring NuGet tools."
