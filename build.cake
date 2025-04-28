@@ -1,10 +1,10 @@
-#tool "nuget:?package=xunit.runners&version=1.9.2";
-#tool "nuget:?package=Squirrel.Windows";
-#tool "nuget:?package=GitVersion.CommandLine";
+#tool "nuget:?package=xunit.runners&version=1.9.2&source=https://api.nuget.org/v3/index.json";
+#tool "nuget:?package=Squirrel.Windows&source=https://api.nuget.org/v3/index.json";
+#tool "nuget:?package=GitVersion.CommandLine&source=https://api.nuget.org/v3/index.json";
 
-#addin "nuget:?package=Cake.FileHelpers&version=1.0.4";
-#addin "nuget:?package=Cake.Squirrel&version=0.12.0";
-#addin "nuget:?package=Newtonsoft.Json";
+#addin "nuget:?package=Cake.FileHelpers&version=1.0.4&source=https://api.nuget.org/v3/index.json";
+#addin "nuget:?package=Cake.Squirrel&version=0.12.0&source=https://api.nuget.org/v3/index.json";
+#addin "nuget:?package=Newtonsoft.Json&source=https://api.nuget.org/v3/index.json";
 using Newtonsoft.Json;
 
 var target = Argument("target", "Default");
